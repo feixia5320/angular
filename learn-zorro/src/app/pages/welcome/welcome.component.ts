@@ -12,4 +12,9 @@ export class WelcomeComponent implements OnInit {
   ngOnInit() {
   }
 
+  aa=false;
+  bb=false;
+
+  bread = ['home', 'log', 'List', 'about me']
+
 }
