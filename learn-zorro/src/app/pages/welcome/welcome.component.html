@@ -8,7 +8,7 @@
         </ul>
     </nz-header>
     <nz-layout>
-        <nz-sider nzWidth="200px" nzTheme="light">
+        <nz-sider nzCollapsible [nzTrigger]="null" [(nzCollapsed)]="isCollapsed" nzWidth="200px" nzTheme="light">
             <ul nz-menu nzMode="inline" class="sider-menu">
                 <li nz-submenu nzOpen nzIcon="user" nzTitle="subnav 1">
                     <ul>
@@ -37,6 +37,10 @@
             </ul>
         </nz-sider>
         <nz-layout class="inner-layout">
+            <div>
+                <i class="trigger" nz-icon [nzType]="isCollapsed ? 'menu-unfold' : 'menu-fold'"
+                (click)="isCollapsed = !isCollapsed"></i>
+            </div>
             <nz-breadcrumb>
                 <nz-breadcrumb-item *ngFor="let item of bread">{{item}}</nz-breadcrumb-item>
             </nz-breadcrumb>

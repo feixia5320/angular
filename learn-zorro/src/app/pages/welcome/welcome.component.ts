@@ -14,6 +14,7 @@ export class WelcomeComponent implements OnInit {
 
   aa=false;
   bb=false;
+  isCollapsed=false;
 
   bread = ['home', 'log', 'List', 'about me']
 
