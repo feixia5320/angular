@@ -7,4 +7,16 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   isCollapsed = false;
+  navList = [
+    {
+      label: 'welcome',
+      url: '/welcome'
+    },{
+      label: 'ngrx',
+      url: '/ngrx'
+    },{
+      label: 'ngrx-lsy',
+      url: '/ngrxLsy'
+    }
+  ]
 }
