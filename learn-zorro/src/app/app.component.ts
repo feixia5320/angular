@@ -17,6 +17,9 @@ export class AppComponent {
     },{
       label: 'ngrx-lsy',
       url: '/ngrxLsy'
+    }, {
+      label: 'article',
+      url: '/article'
     }
   ]
 }

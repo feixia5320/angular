@@ -11,12 +11,16 @@ import { NgZorroAntdModule, NZ_I18N, zh_CN } from 'ng-zorro-antd';//zorro
 import { StoreModule } from '@ngrx/store';
 import { counterReducer } from './store/counter';
 import { lsyReducer } from './store/lsy.reducer';
+// import { articleReducer } from "./store/article/reducer";
+import { reducers, metaReducers } from "./store/article/metaReducer";
+
 // component
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NgrxComponent } from "./component/ngrx/ngrx.component";
 import { NgrxLsyComponent } from "./component/ngrx/ngrx.lsy.component";
 import { NgrxChildComponent } from "./component/ngrx/ngrx.child.component";
+import { ArticleComponent } from "./component/ngrx/article.component"
 
 registerLocaleData(zh);
 
@@ -25,7 +29,8 @@ registerLocaleData(zh);
     AppComponent,
     NgrxComponent,
     NgrxLsyComponent,
-    NgrxChildComponent
+    NgrxChildComponent,
+    ArticleComponent
   ],
   imports: [
     BrowserModule,
@@ -36,6 +41,7 @@ registerLocaleData(zh);
     HttpClientModule,
     BrowserAnimationsModule,
     StoreModule.forRoot({ lsy: lsyReducer, count: counterReducer}), // 注册store
+    StoreModule.forRoot(reducers, { metaReducers })
   ],
   providers: [{ provide: NZ_I18N, useValue: zh_CN }],
   bootstrap: [AppComponent]
