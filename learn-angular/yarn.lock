@@ -176,6 +176,12 @@
   version "0.0.35"
   resolved "http://registry.npm.taobao.org/@schematics/angular/download/@schematics/angular-0.0.35.tgz#6ec020f8be33dce780581000d88352832d218262"
 
+"@types/bootstrap@^3.3.36":
+  version "3.4.0"
+  resolved "https://registry.yarnpkg.com/@types/bootstrap/-/bootstrap-3.4.0.tgz#7e74a2421b3984ce53ab459e979a99a78dd802c6"
+  dependencies:
+    "@types/jquery" "*"
+
 "@types/jasmine@*":
   version "2.6.0"
   resolved "http://registry.npm.taobao.org/@types/jasmine/download/@types/jasmine-2.6.0.tgz#997b41a27752b4850af2683bc4a8d8222c25bd02"
@@ -190,6 +196,12 @@
   dependencies:
     "@types/jasmine" "*"
 
+"@types/jquery@*", "@types/jquery@^3.2.12":
+  version "3.3.36"
+  resolved "https://registry.yarnpkg.com/@types/jquery/-/jquery-3.3.36.tgz#a868c1c244a9f7b988d8fc56a3234f22e73c57b8"
+  dependencies:
+    "@types/sizzle" "*"
+
 "@types/node@^6.0.46", "@types/node@~6.0.60":
   version "6.0.88"
   resolved "http://registry.npm.taobao.org/@types/node/download/@types/node-6.0.88.tgz#f618f11a944f6a18d92b5c472028728a3e3d4b66"
@@ -201,6 +213,10 @@
 "@types/selenium-webdriver@^2.53.35", "@types/selenium-webdriver@~2.53.39":
   version "2.53.42"
   resolved "http://registry.npm.taobao.org/@types/selenium-webdriver/download/@types/selenium-webdriver-2.53.42.tgz#74cb77fb6052edaff2a8984ddafd88d419f25cac"
+
+"@types/sizzle@*":
+  version "2.3.2"
+  resolved "https://registry.yarnpkg.com/@types/sizzle/-/sizzle-2.3.2.tgz#a811b8c18e2babab7d542b3365887ae2e4d9de47"
 
 abbrev@1:
   version "1.1.0"
@@ -654,6 +670,10 @@ boom@2.x.x:
   resolved "http://registry.npm.taobao.org/boom/download/boom-2.10.1.tgz#39c8918ceff5799f83f9492a848f625add0c766f"
   dependencies:
     hoek "2.x.x"
+
+bootstrap@^3.3.7:
+  version "3.4.1"
+  resolved "https://registry.yarnpkg.com/bootstrap/-/bootstrap-3.4.1.tgz#c3a347d419e289ad11f4033e3c4132b87c081d72"
 
 brace-expansion@^1.1.7:
   version "1.1.8"
@@ -2835,6 +2855,10 @@ jasmine@^2.5.3:
 jasminewd2@^2.1.0:
   version "2.1.0"
   resolved "http://registry.npm.taobao.org/jasminewd2/download/jasminewd2-2.1.0.tgz#da595275d1ae631de736ac0a7c7d85c9f73ef652"
+
+jquery@^3.5.0:
+  version "3.5.0"
+  resolved "https://registry.yarnpkg.com/jquery/-/jquery-3.5.0.tgz#9980b97d9e4194611c36530e7dc46a58d7340fc9"
 
 js-base64@^2.1.5, js-base64@^2.1.8, js-base64@^2.1.9:
   version "2.3.2"
