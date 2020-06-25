@@ -1,0 +1,19 @@
+<div class="aside">
+  <ul>
+    <li class="menu__item v-middle" 
+    *ngFor="let menu of menus" 
+    [routerLink]="menu.url"
+    routerLinkActive="menu__item--active">
+    <span class="icon v-middle" [ngClass]="menu.icon"></span>
+      {{menu.title}}
+   </li>
+  </ul>
+  <div class="history_list">
+    <div style="font-size:20px;">History</div>
+    <ul>
+      <li class="history_list_item" *ngFor="let item of LogData">
+        {{item.name}}
+      </li>
+      </ul>
+  </div>
+</div>

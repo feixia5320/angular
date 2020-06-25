@@ -1,0 +1,45 @@
+<div class="content">
+	<ul class="p-l-20">
+		<li class="c__item" *ngFor="let item of list">
+			<span class="icon" [ngClass]='item.icon'></span>
+			<div>
+				<div class="v-middle">
+					<span class="icon i-computer v-middle"></span>
+					<span style="color:#00B3D0;">{{item.url}}</span>
+					<span [ngSwitch]="item.status" style="margin: 0 100px;">
+            <span *ngSwitchCase="'idle'" class="badge badge-success">
+              {{item.status}}</span>
+					<span *ngSwitchCase="'buiding'" class="badge badge-warning">
+            {{item.status}}</span>
+					</span>
+					<span style="color:#4d4d4d;margin-right:20px;">
+            <span class="icon i-tip v-middle"></span>
+					{{item.ip}}</span>
+					<span style="color:#4d4d4d">
+            <span class="icon i-file v-middle"></span>{{item.fileUrl}}</span>
+				</div>
+				<div style="margin-top: 20px;">
+					<span class="icon i-add v-middle point" (click)=add(item.id)>
+            <!-- <app-pop></app-pop> -->
+          </span>
+					<span *ngIf="item.resource">
+            <span *ngFor="let i of item.resource" class="badge v-middle" style="margin: 0 5px;">{{i.name}}
+              <span class="icon i-remove v-middle point" (click)="remove(item.id,i.name)"></span>
+					</span>
+					</span>
+					<span class="badge v-middle badge-info fr" *ngIf="item.deny">
+             <span class="icon i-disabled v-middle"></span>
+					deny
+					</span>
+				</div>
+			</div>
+		</li>
+	</ul>
+</div>
+<!-- icon: 'windows',
+        url: 'bjsafjsaue.xxx.com',
+        status: 'idle',
+        ip:'192.168.1.102',
+        fileUrl: '/var/lib/curson',
+        resource: ['Firefox','Chrome','Safari','Ubuntu'],
+        deny: false -->

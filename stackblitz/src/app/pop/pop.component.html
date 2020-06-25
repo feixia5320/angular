@@ -1,0 +1,22 @@
+<div class="pop-box">
+<div class="pop" #pop (click)="stopClick($event)">
+  <div class="corner"></div>
+  <div class="inner">
+    <form [formGroup]="formGroup">
+      <ng-container *ngFor="let item of getKey;">
+        <ng-container [ngSwitch]="config[item][3]['type']">
+                                <ng-container *ngSwitchCase="'text'">
+  <input type="" [formControlName]="item">
+                                </ng-container>
+        </ng-container>
+      </ng-container>
+    
+    </form>
+    <div class="btn-box">
+        <div class="btn point btn-comfirm" (click)="close(true)">Add Resources</div>
+        <div class="btn point" (click)="close()">Cancle</div>
+    </div>
+  
+  </div>
+</div>
+</div>

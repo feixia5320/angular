@@ -1,0 +1,64 @@
+.pop {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 550px;
+  z-index: 10;
+  /* visibility: hidden; */
+}
+.pop-box {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2
+}
+.pop .corner {
+    top: -12px;
+    left: 14px;
+    border: 6px solid transparent;
+    border-bottom: 6px solid #00B3D0; 
+    position: absolute;
+}
+.corner::after {
+    content: "";
+    top: -5px;
+    left: -6px;
+    border: 6px solid transparent;
+    border-bottom: 6px solid #fff;
+    position: absolute;
+}
+.pop .inner {
+    padding: 10px 20px;
+    border: 1px solid #00B3D0;
+    background-color: #fff;
+    border-radius: 4px;
+}
+.btn-box {
+  margin-top: 10px;
+}
+.btn {
+  display: inline-block;
+  margin: 0 5px;
+  width: 100px;
+  height: 30px;
+  line-height: 30px;
+  font-size: 12px;
+  text-align: center;
+  background: #000;
+  color: #fff;
+}
+.btn-comfirm {
+  background: #00B3D0;
+}
+input {
+  width: 500px;
+  height: 24px;
+  line-height: 24px;
+  border: 1px solid #ccc;
+  padding: 0 10px;
+}
+input:focus,input:active {
+    border: 1px solid #ccc !important;
+}
