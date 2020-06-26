@@ -9,9 +9,11 @@ import { IconsProviderModule } from './icons-provider.module';
 import { NgZorroAntdModule, NZ_I18N, zh_CN } from 'ng-zorro-antd';//zorro
 //ngrx/store
 import { StoreModule } from '@ngrx/store';
+// 写法1
 import { counterReducer } from './store/counter';
 import { lsyReducer } from './store/lsy.reducer';
-// import { articleReducer } from "./store/article/reducer";
+// 或 写法2
+import { articleReducer } from "./store/article/reducer";
 import { reducers, metaReducers } from "./store/article/metaReducer";
 
 // modal
@@ -49,7 +51,8 @@ registerLocaleData(zh);
     HttpClientModule,
     BrowserAnimationsModule,
     StoreModule.forRoot({ lsy: lsyReducer, count: counterReducer}), // 注册store
-    StoreModule.forRoot(reducers, { metaReducers })
+    // 或
+    // StoreModule.forRoot(reducers, { metaReducers })
   ],
   providers: [{ provide: NZ_I18N, useValue: zh_CN }, PopService],
   bootstrap: [AppComponent],
