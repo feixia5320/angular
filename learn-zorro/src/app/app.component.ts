@@ -9,6 +9,7 @@ export class AppComponent {
   isCollapsed = false;
   navList = [
     {
+      // 路由懒加载 模块
       label: 'welcome',
       url: '/welcome'
     },{
@@ -20,6 +21,10 @@ export class AppComponent {
     }, {
       label: 'article',
       url: '/article'
+    }, {
+      // 模态弹框
+      label: 'modal',
+      url: '/modal'
     }
   ]
 }

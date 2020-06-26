@@ -14,13 +14,19 @@ import { lsyReducer } from './store/lsy.reducer';
 // import { articleReducer } from "./store/article/reducer";
 import { reducers, metaReducers } from "./store/article/metaReducer";
 
+// modal
+import { PopService } from './service/pop.service';
+import { PopComponent } from './component/modal/pop/pop.component';
 // component
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NgrxComponent } from "./component/ngrx/ngrx.component";
 import { NgrxLsyComponent } from "./component/ngrx/ngrx.lsy.component";
 import { NgrxChildComponent } from "./component/ngrx/ngrx.child.component";
-import { ArticleComponent } from "./component/ngrx/article.component"
+import { ArticleComponent } from "./component/ngrx/article.component";
+import { ModalComponent } from "./component/modal/modal/modal.component";
+
+// service
 
 registerLocaleData(zh);
 
@@ -30,7 +36,9 @@ registerLocaleData(zh);
     NgrxComponent,
     NgrxLsyComponent,
     NgrxChildComponent,
-    ArticleComponent
+    ArticleComponent,
+    ModalComponent,
+    PopComponent,
   ],
   imports: [
     BrowserModule,
@@ -43,7 +51,8 @@ registerLocaleData(zh);
     StoreModule.forRoot({ lsy: lsyReducer, count: counterReducer}), // 注册store
     StoreModule.forRoot(reducers, { metaReducers })
   ],
-  providers: [{ provide: NZ_I18N, useValue: zh_CN }],
-  bootstrap: [AppComponent]
+  providers: [{ provide: NZ_I18N, useValue: zh_CN }, PopService],
+  bootstrap: [AppComponent],
+  entryComponents: [PopComponent],
 })
 export class AppModule { }

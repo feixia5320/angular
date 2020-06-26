@@ -25,3 +25,10 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+
+## 主要功能
+- 模块懒加载： 子模块名welcome
+- ngrx
+- 模态弹框，组建名modal，服务：pop.service, popup.ref.ts
+
