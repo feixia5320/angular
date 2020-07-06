@@ -1,4 +1,4 @@
-<nz-layout class="app-layout">
+<nz-layout class="app-layout" *ngIf="false">
   <nz-sider class="menu-sidebar"
             nzCollapsible
             nzWidth="256px"
@@ -49,3 +49,15 @@
     </nz-content>
   </nz-layout>
 </nz-layout>
+<div class="main-contain">
+  <ul class="left-container">
+    <li *ngFor="let item of navList">
+      <a [routerLink]="item.url">{{item.label}}</a>
+    </li>
+  </ul>
+  <div class="right-container">
+    <router-outlet></router-outlet>
+  </div>
+</div>
+
+

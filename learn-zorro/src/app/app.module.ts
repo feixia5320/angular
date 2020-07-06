@@ -27,6 +27,7 @@ import { NgrxLsyComponent } from "./component/ngrx/ngrx.lsy.component";
 import { NgrxChildComponent } from "./component/ngrx/ngrx.child.component";
 import { ArticleComponent } from "./component/ngrx/article.component";
 import { ModalComponent } from "./component/modal/modal/modal.component";
+import { EnumComponent } from "./component/ts/enum/enum.component";
 
 // service
 
@@ -41,6 +42,7 @@ registerLocaleData(zh);
     ArticleComponent,
     ModalComponent,
     PopComponent,
+    EnumComponent,
   ],
   imports: [
     BrowserModule,

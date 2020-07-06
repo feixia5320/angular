@@ -25,6 +25,10 @@ export class AppComponent {
       // 模态弹框
       label: 'modal',
       url: '/modal'
+    }, {
+      // ts
+      label: 'ts',
+      url: '/ts'
     }
   ]
 }

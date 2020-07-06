@@ -4,6 +4,7 @@ import { NgrxComponent } from "./component/ngrx/ngrx.component";
 import { NgrxLsyComponent } from "./component/ngrx/ngrx.lsy.component";
 import { ArticleComponent } from "./component/ngrx/article.component";
 import { ModalComponent } from './component/modal/modal/modal.component';
+import { EnumComponent } from "./component/ts/enum/enum.component";
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: '/welcome' },
@@ -14,6 +15,7 @@ const routes: Routes = [
   // 或 预加载指定模块data:{preload: true}
   // { path: 'welcome', loadChildren: './pages/welcome/welcome.module#WelcomeModule', data:{preload: true}}
   { path: 'modal', component: ModalComponent},
+  { path: 'ts', component: EnumComponent},
 ];
 
 @NgModule({
